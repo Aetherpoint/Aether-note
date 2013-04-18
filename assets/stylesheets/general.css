@@ -1,0 +1,171 @@
+/* Aethernote Styles */
+
+/* Elements */
+* {
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+html {
+	height: 100%;
+	overflow: hidden;
+}
+body {
+	background-color: #F9F9F9;
+	color: #111;
+	font-family: 'lektonregular', Georgia, serif;
+	height: 100%;
+	margin: 0;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+
+	-webkit-font-smoothing: antialiased !important;
+}
+h1, h2, h3, h4, h5 {
+	font-family: 'lektonbold', Georgia, serif;
+    font-weight: normal;
+    font-style: normal;
+}
+h1 {
+	font-size: 1.4em;
+}
+h2 {
+	font-size: 1.2em;
+}
+a:link, a:visited {
+	color: #378E93;
+	text-decoration: none;
+	-webkit-transition: color .3s ease;
+	-moz-transition: color .3s ease;
+	-o-transition: color .3s ease;
+	transition: color .3s ease;
+}
+a:hover, a:active {
+	color: #1F585B;
+}
+blockquote {
+	font-family: 'lektonitalic', Georgia, serif;
+}
+ul {
+	height: 3em;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Layout */
+.main {
+	height: 100%;
+}
+.notes {
+	font-size: 1.2em;
+	height: 100%;
+	padding: 5% 5% 5% 5%;
+	padding-top: 2.5em; /* Opens up space if I want to go with a static header. Only make it opaque when at the top? */
+	opacity: .8;
+	min-height: 100%;
+}
+.option-contain {
+
+}
+.controls-container {
+	background: #F9F9F9;
+	border-bottom: solid #eee 2px;
+	cursor: pointer;
+	height: 3em;
+	position: fixed; /* Use this so users don't have to navigate up / down the entire page? */
+	width: 100%;
+	z-index: 99;
+}
+.option-contain:hover, .option-contain:active {
+
+}
+.icon {
+	margin: 0 auto;
+	opacity: .2;
+	transition: all .3s ease;
+
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+}
+.icon:hover, .icon:active {
+	opacity: .8;
+}
+.option-contain {
+	color: #bbb;
+	display: inline-block;
+	font-size: 2em;
+	height: 100%;
+	margin: 0 -4px;
+	padding: .4em;
+	width: 25%;
+}
+
+/* Text Panes */
+textarea {
+	background-color: #F9F9F9;
+	border: none;
+	font-family: 'lektonregular', Georgia, serif;
+	outline: none;
+}
+
+/* Only show the top bar when the page is scrolled to the top? */
+.pane {
+	font-size: 1.2em;
+	padding: 10%;
+	/* note: the panes get their height set with
+       javascript; see sizeTextAreas(). */
+
+	/* for now, set a height so things look nice
+	   if the user has javascript disabled */
+	min-height: 100%;
+	width: 100%;
+}
+#inputPane {
+	padding-top: 3.5em;
+	resize: none;
+}
+#previewPane {
+    height: 300px; /* or whatever measurements you want */
+    overflow: auto;
+}
+
+
+/* Utilities */
+/* Scroll Bar Styles */
+::-webkit-scrollbar {
+    width: .5em;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px #111; 
+    background-color: #fefefe;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 1px #111;
+	background-color: #eee;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(0,0,0,0.0); 
+}
+
+
+/* Media Queries */ 
+@media (min-width: 50em) {
+.notes {
+	padding: 5% 10% 10% 10%;
+	font-size: 1.4em;
+}
+.controls-container {
+	padding: 0 10% 0 10%;
+}
+}
+
+/* Print Media Queries */
+@media print {
+body {
+	text-shadow: none;
+}
+
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<title>Showdown - Markdown in Javascript</title>
+	<script type="text/javascript" src="showdown.js"></script>
+	<script type="text/javascript" src="showdown-gui.js"></script>
+
+	<link href="../_css/fonts.css" rel="stylesheet">
+	<link href="../_css/general.css" rel="stylesheet">
+
+	<script>
+/* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
+window.grunticon=function(e,t){if(!e||e.length!==3)return;var n=window,r=!!n.document.createElementNS&&!!n.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect,i=function(t){var i=n.document.createElement("link"),s=n.document.getElementsByTagName("script")[0];i.rel="stylesheet",i.href=e[t&&r?0:t?1:2],s.parentNode.insertBefore(i,s)},s=new n.Image;s.onerror=function(){i(!1)},s.onload=function(){i(s.width===1&&s.height===1)},s.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="};
+grunticon( [ "../_css/icons/icons.data.svg.css", "../_css/icons/icons.data.png.css", "../_css/icons/icons.fallback.css" ] );</script>
+<noscript><link href="../Aether-note/_css/icons/icons.fallback.css" rel="stylesheet"></noscript>
+
+</head>
+
+<!-- DEPLOY WITH NODE (check net tuts)! -->
+
+<body class="tmpl-home">
+		<div class="main"> <!-- main -->
+			<div class="controls-container">
+				<ul>
+					<li class="option-contain"><a href="#"><div class="icon-view icon" style="width: 23px; height: 17.834px"></div></a></li>
+					<li class="option-contain"></li>
+					<li class="option-contain"><a href="#"><div class="icon-download icon" style="width: 18.093px; height: 18.75px"></div></a></li>
+					<li class="option-contain"><a href="mailto:aetherpoint?subject=Mail from Our Site"><div class="icon-send icon" style="width: 24.5px; height: 18.75px"></a></li>
+				</ul>
+			</div>
+
+			<!-- This should ideally be an HTML5 content editable block... -->
+			<textarea id="inputPane" class="notes pane" contenteditable="true">#Hello World!</textarea>
+
+			<div class="select-contain">
+				<select id="paneSetting">
+					<option value="previewPane">Preview</option>
+					<!-- <option value="outputPane">HTML Output</option> -->
+					<!-- <option value="syntaxPane">Syntax Guide</option> -->
+				</select>
+			</div>
+		
+			<!-- <section id="outputPane" class="pane" readonly="readonly">
+			</section> -->
+		
+			<section id="previewPane" class="pane">
+			</section>
+		
+			<!-- <section id="syntaxPane" class="pane" cols="80" rows="20" readonly="readonly">
+			</section> -->
+		</div> <!-- /main -->
+
+	<div id="footer">
+		<span id="convertTextControls">
+			<button id="convertTextButton" type="button" title="Convert text now">Convert Text</button>
+			
+			<select id="convertTextSetting">
+				<option value="delayed">in the background</option>
+				<option value="continuous">every keystroke</option>
+				<option value="manual">manually</option>
+			</select>
+		</span>
+		<div id="processingTime" title="Last processing time">0 ms</div>
+	</div>
+
+	</body>
+</html>
